@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kitabcha_hisab/data/customer_data.dart';
+import 'package:kitabcha_hisab/screens/customer_detail_screen.dart';
+import 'package:kitabcha_hisab/widgets/customer_card.dart';
 
 class CustomersScreen extends StatelessWidget {
   const CustomersScreen({super.key});
@@ -13,10 +15,7 @@ class CustomersScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final customer = CustomerData.customers[index];
 
-          return ListTile(
-            title: Text(customer.name),
-            subtitle: Text(customer.debt.toString()),
-          );
+          return CustomerCard(customer: customer);
         },
       ),
     );
