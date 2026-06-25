@@ -30,13 +30,25 @@ class CustomerDetailScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 CircleAvatar(radius: 40, child: Text(customer.name[0])),
+                Text(
+                  customer.name,
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
                 SizedBox(height: 20),
                 InfoRow(title: 'Phone', value: customer.phone),
                 InfoRow(title: 'Address', value: customer.address),
-                InfoRow(title: 'Debt', value: customer.debt),
+                InfoRow(title: 'Debt', value: "${customer.debt} AFN"),
+                const SizedBox(height: 20),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text("Record Payment"),
+                  ),
+                ),
               ],
             ),
           ),
