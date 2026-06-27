@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitabcha_hisab/screens/payment_screen.dart';
 import 'package:kitabcha_hisab/utils/constants.dart';
 import '../models/customer.dart';
 import '../widgets/info_row.dart';
@@ -45,7 +46,11 @@ class CustomerDetailScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return PaymentScreen(customer: customer);
+                        }));
+                      },
                     child: const Text("Record Payment"),
                   ),
                 ),
