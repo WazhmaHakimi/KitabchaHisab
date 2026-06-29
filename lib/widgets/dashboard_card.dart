@@ -18,7 +18,7 @@ class DashboardCard extends StatelessWidget {
             color: Colors.black.withOpacity(0.2),
             blurRadius: 4,
             offset: Offset(0, 3),
-          )
+          ),
         ],
       ),
       child: Padding(
@@ -26,9 +26,12 @@ class DashboardCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(title, style: TextStyle(color: kDarkGrayColor, fontSize: 12),),
-            SizedBox(height: 10,),
-            Text(value, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+            Text(title, style: TextStyle(color: kDarkGrayColor, fontSize: 12)),
+            SizedBox(height: 10),
+            Text(
+              value,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
           ],
         ),
       ),

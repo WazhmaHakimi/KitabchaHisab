@@ -3,7 +3,8 @@ class Customer {
   final String name;
   final String phone;
   final String address;
-  final double debt;
+  double debt;
+  List<double> payments;
 
   Customer({
     required this.id,
@@ -11,5 +12,6 @@ class Customer {
     required this.phone,
     required this.address,
     required this.debt,
+    this.payments = const [],
   });
 }
